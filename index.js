@@ -5,7 +5,7 @@ $.fn.getPokemon = function (elemento, pokenumber) {
   $.ajax({
       url: `https://pokeapi.co/api/v2/pokemon/${pokenumber}`,
       success: function( result ) {
-        pokemon = result.sprites.front_shiny;
+        pokemon = result.sprites.front_default;
         elemento.html("<image src=" + pokemon + ">");
       }
     });
